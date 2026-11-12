@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Cornejo (@eldelar_) | Ingeniero de Software & Inteligencia Artificial</title>
+    
+    <!-- Metadatos de SEO y presentación -->
+    <meta name="description" content="Portafolio profesional de Richard Cornejo (@eldelar_). Ingeniero de Software especializado en Inteligencia Artificial aplicada y desarrollo Full Stack.">
+    <meta name="author" content="Richard Cornejo">
+    <meta name="theme-color" content="#F8FAFC">
+    
+    <!-- Tipografías: Plus Jakarta Sans (Geométrica) y JetBrains Mono (Monoespaciada) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="fluid-canvas"></canvas>
+
+    <!-- Contenedor general de la interfaz de usuario -->
+    <div class="interfaz-global">
+
+        <!-- Barra de navegación superior flotante y minimalista -->
+        <header class="barra-navegacion">
+            <div class="nav-contenido">
+                <!-- Logotipo / Handle de identidad -->
+                <a href="#hero" class="logo-enlace" aria-label="Ir al inicio - eldelar_ />">
+                    <span class="logo-texto">eldelar_<span class="logo-simbolo">/&gt;</span></span>
+                </a>
+
+                <!-- Alternador de vistas para la sección de proyectos -->
+                <div class="alternador-vistas" role="group" aria-label="Modo de visualización de proyectos">
+                    <button type="button" id="btn-vista-spiral" class="btn-vista activo" data-vista="spiral" aria-pressed="true" title="Vista Galería Flotante (Spiral)">
+                        <svg class="icono-vista" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        <span class="texto-vista">Spiral</span>
+                    </button>
+                    <button type="button" id="btn-vista-list" class="btn-vista" data-vista="list" aria-pressed="false" title="Vista Lista Limpia (List)">
+                        <svg class="icono-vista" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                        <span class="texto-vista">List</span>
+                    </button>
+                </div>
+
+                <!-- Indicador de disponibilidad para proyectos o contratación -->
+                <div class="indicador-disponibilidad" title="Richard Cornejo está disponible para nuevos proyectos y roles de alto impacto">
+                    <span class="punto-pulso" aria-hidden="true"></span>
+                    <span class="texto-disponible">🟢 Disponible</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido principal interactivo -->
+        <main class="contenedor-principal">
+
+            <!-- Sección Hero: Tipográfica, limpia y de alto impacto -->
+            <section id="hero" class="seccion-hero">
+                <div class="hero-insignia">
+                    <span class="insignia-icono">✦</span>
+                    <span class="insignia-texto">Software Engineer &amp; AI Specialist</span>
+                </div>
+
+                <h1 class="hero-titulo">
+                    Richard Cornejo
+                    <span class="hero-handle">@eldelar_</span>
+                </h1>
+
+                <p class="hero-subtitulo">
+                    Diseño y desarrollo de arquitecturas de software escalables, integración de modelos de <span class="destaque-gradiente">Inteligencia Artificial aplicada</span> y soluciones <span class="destaque-gradiente">Full Stack</span> con experiencias visuales inmersivas y rendimiento milimétrico.
+                </p>
+
+                <div class="hero-acciones">
+                    <a href="#proyectos" class="btn-primario">
+                        <span>Explorar Proyectos</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </a>
+                    <button type="button" class="btn-secundario btn-copiar-trigger" data-correo="eldelar.dev@gmail.com">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span>Copiar correo</span>
+                    </button>
+                </div>
+
+                <!-- Micro-métricas de especialización -->
+                <div class="hero-skills-chips">
+                    <span class="chip">Machine Learning &amp; Inferencia</span>
+                    <span class="chip">Arquitecturas Distribuidas</span>
+                    <span class="chip">WebGL &amp; UI Interactiva</span>
+                    <span class="chip">APIs RESTful &amp; Cloud</span>
+                </div>
+            </section>
+
+            <!-- Sección interactiva: Proyectos Destacados -->
+            <section id="proyectos" class="seccion-proyectos">
+                <div class="proyectos-cabecera">
+                    <div class="bloque-titulo-proyectos">
+                        <span class="etiqueta-seccion">// PORTFOLIO SELECCIONADO</span>
+                        <h2 class="titulo-proyectos">Proyectos Destacados</h2>
+                    </div>
+                    <div class="pista-interaccion">
+                        <span class="icono-destello">✦</span>
+                        <span id="texto-pista-interaccion">Mueve el cursor sobre la pantalla para activar el fluido y la inclinación 3D</span>
+                    </div>
+                </div>
+
+                <!-- Contenedor de la galería (Controlado dinámicamente: .vista-spiral o .vista-list) -->
+                <div id="galeria-proyectos" class="galeria-proyectos vista-spiral">
+
+                    <!-- PROYECTO 1 -->
+                    <article class="tarjeta-proyecto" data-id="1">
+                        <div class="tarjeta-resplandor-borde" aria-hidden="true"></div>
+                        
+                        <div class="tarjeta-header">
+                            <span class="tarjeta-indice">01</span>
+                            <span class="tarjeta-categoria">Procesamiento de datos en tiempo real</span>
+                        </div>
+
+                        <div class="tarjeta-cuerpo">
+                            <h3 class="tarjeta-nombre">Sistema de Gestión Documental Municipal con IA</h3>
+                            <p class="tarjeta-descripcion">
+                                Plataforma inteligente de alto impacto para la digitalización, extracción automática de metadatos y clasificación semántica de expedientes municipales en tiempo real, agilizando el flujo administrativo gubernamental.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-footer">
+                            <div class="stack-etiquetas" aria-label="Tecnologías empleadas">
+                                <span class="tag-tecnologia">TensorFlow.js</span>
+                                <span class="tag-tecnologia">JavaScript</span>
+                                <span class="tag-tecnologia">Web App</span>
+                            </div>
+                            <div class="tarjeta-icono-accion" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 2 -->
+                    <article class="tarjeta-proyecto" data-id="2">
+                        <div class="tarjeta-resplandor-borde" aria-hidden="true"></div>
+                        
+                        <div class="tarjeta-header">
+                            <span class="tarjeta-indice">02</span>
+                            <span class="tarjeta-categoria">Aplicación móvil nativa multimedia</span>
+                        </div>
+
+                        <div class="tarjeta-cuerpo">
+                            <h3 class="tarjeta-nombre">CineApp</h3>
+                            <p class="tarjeta-descripcion">
+                                Aplicación Android nativa enfocada en la exploración y descubrimiento de contenido cinematográfico multimedia. Implementa consumo asíncrono y resiliente de APIs RESTful, almacenamiento en caché y diseño moderno.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-footer">
+                            <div class="stack-etiquetas" aria-label="Tecnologías empleadas">
+                                <span class="tag-tecnologia">Android</span>
+                                <span class="tag-tecnologia">Retrofit</span>
+                                <span class="tag-tecnologia">Java/Kotlin</span>
+                            </div>
+                            <div class="tarjeta-icono-accion" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 3 -->
+                    <article class="tarjeta-proyecto" data-id="3">
+                        <div class="tarjeta-resplandor-borde" aria-hidden="true"></div>
+                        
+                        <div class="tarjeta-header">
+                            <span class="tarjeta-indice">03</span>
+                            <span class="tarjeta-categoria">Optimización de stock &amp; ML</span>
+                        </div>
+
+                        <div class="tarjeta-cuerpo">
+                            <h3 class="tarjeta-nombre">Modelo Predictivo de Inventario Retail</h3>
+                            <p class="tarjeta-descripcion">
+                                Pipeline analítico avanzado con algoritmos de clustering K-Means para segmentación de demanda y regresión lineal múltiple para la predicción precisa y optimización de existencias de inventario comercial.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-footer">
+                            <div class="stack-etiquetas" aria-label="Tecnologías empleadas">
+                                <span class="tag-tecnologia">Python</span>
+                                <span class="tag-tecnologia">Scikit-Learn</span>
+                                <span class="tag-tecnologia">Pandas</span>
+                                <span class="tag-tecnologia">NumPy</span>
+                            </div>
+                            <div class="tarjeta-icono-accion" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 4 -->
+                    <article class="tarjeta-proyecto" data-id="4">
+                        <div class="tarjeta-resplandor-borde" aria-hidden="true"></div>
+                        
+                        <div class="tarjeta-header">
+                            <span class="tarjeta-indice">04</span>
+                            <span class="tarjeta-categoria">Plataforma web single-page</span>
+                        </div>
+
+                        <div class="tarjeta-cuerpo">
+                            <h3 class="tarjeta-nombre">E-Commerce Minimalista (&quot;Tienda Ropa&quot;)</h3>
+                            <p class="tarjeta-descripcion">
+                                Plataforma de comercio electrónico single-page de alto rendimiento, tiempos de carga casi instantáneos, diseño editorial centrado en conversión y experiencia de usuario fluida sin frameworks pesados.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-footer">
+                            <div class="stack-etiquetas" aria-label="Tecnologías empleadas">
+                                <span class="tag-tecnologia">HTML5</span>
+                                <span class="tag-tecnologia">CSS3</span>
+                                <span class="tag-tecnologia">JavaScript</span>
+                                <span class="tag-tecnologia">GitHub Pages</span>
+                            </div>
+                            <div class="tarjeta-icono-accion" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer minimalista -->
+        <footer class="footer-minimalista">
+            <div class="footer-contenido">
+                <div class="footer-info">
+                    <span class="footer-autor">Richard Cornejo &middot; <strong>@eldelar_</strong></span>
+                    <span class="footer-separador">&bull;</span>
+                    <span class="footer-texto">Ingeniería de Software con Inteligencia Artificial</span>
+                </div>
+
+                <div class="footer-contacto">
+                    <!-- Botón interactivo para copiar correo al portapapeles -->
+                    <button type="button" id="btn-copiar-correo-footer" class="btn-correo-interactivo btn-copiar-trigger" data-correo="eldelar.dev@gmail.com" aria-label="Copiar correo eldelar.dev@gmail.com">
+                        <svg class="icono-correo" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <span class="correo-texto">eldelar.dev@gmail.com</span>
+                        <span class="badge-copiar">Copiar</span>
+                    </button>
+                </div>
+
+                <div class="footer-meta">
+                    <span class="meta-item">WebGL Navier-Stokes Engine</span>
+                    <span class="meta-item">© 2026</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Notificación flotante (Toast) para confirmación de copiado -->
+    <div id="toast-notificacion" class="toast-notificacion" role="status" aria-live="polite">
+        <div class="toast-contenido">
+            <svg class="toast-icono" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span id="toast-mensaje" class="toast-texto">¡Correo copiado al portapapeles con éxito!</span>
+        </div>
+    </div>
+
+    <!-- Librería oficial de simulación WebGL de fluidos por CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/webgl-fluid@0.3"></script>
+    <!-- Script de interactividad y configuración del portafolio -->
+    <script src="script.js"></script>
+</body>
+</html>
